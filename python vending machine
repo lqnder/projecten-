@@ -1,1 +1,50 @@
+class VendingMachine:
+    def __init__(self, merk, capaciteit, inventaris, toestand,huidig_saldo=0):
+        self.merk = merk
+        self.capaciteit = capaciteit
+        self.inventaris = inventaris
+        self.toestand = toestand
+        self.huidig_saldo= huidig_saldo
+    def opstart(self):
+        if self.toestand == 'aan':
+            print('Toestel is al aan')
+        else:
+            print('toestel gaat aan')
+            self.toestand = 'aan'
+
+
+    def herkenning(self):
+         print(f'merk : {self.merk}')
+         print(f'capaciteit : {self.capaciteit}')
+         print(f'inventaris : {self.inventaris}')
+         print(f'huidig_saldo : {self.huidig_saldo}')
+    def uitzetten(self):
+        if self.toestand == 'uit':
+            print('toestel is al uit')
+        else:
+            print('toestel gaat uit')
+            self.toestand = 'uit'
+    def kopen(self,product,prijs):
+        if product not in self.inventaris:
+            print(f'{product} is niet beschikbaar')
+        self.huidig_saldo += prijs
+        self.inventaris.remove(product)    
+        print(f'je hebt {product} gekocht voor {prijs}')
+   
+
+
+       
+       
+
+
+productelijst = {'cola' : 5.00, 'water' : 4.50}
+vm = VendingMachine('merk_1', 100, ['cola', 'water'], toestand='uit')
+vm.opstart()
+vm.uitzetten()  
+vm.herkenning()
+vm.kopen('cola',5.00)
+   
+
+
+
 
