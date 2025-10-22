@@ -1,0 +1,26 @@
+kubus = 'R1 B2 G3 R1 B2 R3 B2 G2'
+
+# Split de string in losse blokjes
+items = kubus.split()
+
+# Tellers voor elke kleur
+rood = 0
+blauw = 0
+groen = 0
+
+# Loop door elk blokje en tel op
+for item in items:
+    kleur = item[0]       # Eerste letter: R, B of G²²
+    aantal = int(item[1]) # Tweede teken: het aantal
+
+    if kleur == 'R':
+        rood += aantal
+    elif kleur == 'B':
+        blauw += aantal
+    elif kleur == 'G':
+        groen += aantal
+
+# Print het totaal per kleur
+print("Rood:", rood)
+print("Blauw:", blauw)
+print("Groen:", groen)
