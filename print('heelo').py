@@ -7,39 +7,40 @@ lijst = ['kinetische energie / KE','potentiële_zwaarte_energie / PE','potentië
 def kinetische_energie():
         snelheid = v = float(input('snelheid : '))
         massa = m = float(input('massa : '))
+        kinetische_energie = m/2*pow(v, 2)
         if v == 0:
             print('er is geen kinetische energie')
             sys.exit
         else : 
-              print(m/2*pow(v , 2))
+              print(f'de kinetische_energie bedraagt {kinetische_energie}')
 
 
 #potentiËle zwaarte energie : formule ,  printen als h = 0 , g = 9,81 (constante)
 def potentiële_zwaarte_energie():
-        massa = m = float(input('massa : '))
-        hoogte = h = float(input('hoogte : '))
+        g = 9.81
+        massa = m = int(input('massa : '))
+        hoogte = h = int(input('hoogte : '))
+        potentiële_zwaarte_energie = m*h*g
         if h == 0:
             print('er is geen potentiele zwaarte energie')
         else:
-              print(m*h*g)
+              print(f'de potentiele zwaarte energie bedraagt {potentiële_zwaarte_energie}')
 
 #potentiële elastische energie
 def potentiële_elastische_energie():
-    k = veerconstanten = float(input('wat is de veerconstanten : '))
-    l = lengte_verandering = float(input('wat is de lengte_vernandering'))
+    k = veerconstanten = int(input('wat is de veerconstanten : '))
+    l = lengte_verandering = int(input('wat is de lengte_vernandering'))
+    potentiële_elastische_energie = k/2*pow(l , 2)
     if k == 0:
         print('er is geen elastische energie')
     else:
-        print(k/2*pow(l , 2))
+        print(f'de potentiele elastische energie bedraagt {potentiële_elastische_energie}')
 
-#arbeid
 def arbeid():
-    kracht = f = float(input('wat is de kracht die je uitvoert'))
+    kracht = f = float(input('wat is de kracht die je uitvoert  : '))
     afstand = x = float(input('wat is de afstand van het begin punt tot het einde : '))
-    if x or f == 0:
-        print('er is geen arbeid verricht')
-    else : 
-        print(f*x)
+    arbeid = f*x
+    print(f'je hebt {arbeid:.>} arbeid verricht ')
 
 #wrijving
 def wrijvings_kracht():
@@ -77,13 +78,4 @@ def Etotaal():
 def Enuttig():
     Etotaal = kinetische_energie + potentiële_elastische_energie + potentiële_zwaarte_energie
     warmte = Q = kinetische_energie - potentiële_zwaarte_energie
-
     print(Etotaal - Q) 
-
-
-while True:
-     input(f'wat wil je doen {lijst} ? :  ')
-     bob = 0
-     bob +=1
-     if bob == 560:
-          break
