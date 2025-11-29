@@ -13,8 +13,6 @@ def kinetische_energie():
             sys.exit
         else : 
               print(f'de kinetische_energie bedraagt {kinetische_energie}')
-
-
 #potentiËle zwaarte energie : formule ,  printen als h = 0 , g = 9,81 (constante)
 def potentiële_zwaarte_energie():
         g = 9.81
@@ -35,7 +33,7 @@ def potentiële_elastische_energie():
         print('er is geen elastische energie')
     else:
         print(f'de potentiele elastische energie bedraagt {potentiële_elastische_energie}')
-
+#arbeid
 def arbeid():
     kracht = f = float(input('wat is de kracht die je uitvoert  : '))
     afstand = x = float(input('wat is de afstand van het begin punt tot het einde : '))
@@ -44,38 +42,25 @@ def arbeid():
 
 #wrijving
 def wrijvings_kracht():
-    kracht = f = float(input('wat is de kracht die je uitvoert'))
-    afstand = x = float(input('wat is de afstand van het begin punt tot het einde : '))
-    if x or f > 0:
+    kracht = f = int(input('wat is de kracht die je uitvoert in newtons: '))
+    afstand = x = int(input('wat is de afstand van het begin punt tot het einde : '))
+    if x or f < 0:
          print('er is geen wrijvingskracht')
     else : 
-       print(-f*x) 
-
+       print(f'de wrijvings kracht bedraagt {wrijvings_kracht}')
 #rendement
 def rendement():
-    kinetische_energie  = float(input('wat is de kinetische energie : '))
-    potentiële_zwaarte_energie = float(input('wat is de potentiele zwaarte energie : '))
-    potentiële_elastische_energie = float(input('wat is de potentiele elastische energie : '))
-    Etotaal = kinetische_energie + potentiële_zwaarte_energie + potentiële_elastische_energie
-    warmte = Q = kinetische_energie - potentiële_zwaarte_energie
-    Enuttig = Etotaal - Q
-    rendement = n = Enuttig/Etotaal   
-    print(rendement)
-
+    Etotaal = int((input('wat is de totale energie : ')))
+    Enuttig = int(input('wat is de nuttige energie : '))
+    rendement = n = (Enuttig/Etotaal) * 100   
+    print(f'het rendement bedraagt {rendement}%')
 #etotaal
 def Etotaal():
-    kinetische_energie  = float(input('wat is de kinetische energie : '))
-    potentiële_zwaarte_energie = float(input('wat is de potentiele zwaarte energie : '))
-    potentiële_elastische_energie = float(input('wat is de potentiele elastische energie : '))
-    warmte = Q = kinetische_energie - potentiële_zwaarte_energie
-    Etotaal1 = int(kinetische_energie + potentiële_elastische_energie + potentiële_zwaarte_energie)
+    kinetische_energie  = int(input('wat is de kinetische energie : '))
+    potentiële_zwaarte_energie = int(input('wat is de potentiele zwaarte energie : '))
+    potentiële_elastische_energie = int(input('wat is de potentiele elastische energie : '))
+    Etotaal = int(kinetische_energie + potentiële_elastische_energie + potentiële_zwaarte_energie)
     if kinetische_energie and potentiële_elastische_energie and potentiële_zwaarte_energie == 0:
         print('geen energie waarom probeer je energie te berekenen als je geen energie hebt kieken een kind van vier is slimmer dan u verspil mijn tijd niet alsjeblief dit programma is zo saai ik moet eigenlijk gaan slapen')
     else:
-        print(kinetische_energie + potentiële_elastische_energie + potentiële_zwaarte_energie)
-      
-
-def Enuttig():
-    Etotaal = kinetische_energie + potentiële_elastische_energie + potentiële_zwaarte_energie
-    warmte = Q = kinetische_energie - potentiële_zwaarte_energie
-    print(Etotaal - Q) 
+        print(f'de totale energie bedraagt {Etotaal}')
