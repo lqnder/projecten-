@@ -1,0 +1,1 @@
+een rapport dat jaarlijks de gelukkigste landen ter wereld rangschikt op basis van factoren zoals levenstevredenheid, nationaal inkomen per hoofd van de bevolking, sociale steun, gezonde levensverwachting, vrijheid, vrijgevigheid en corruptie
