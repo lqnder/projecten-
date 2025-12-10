@@ -1,0 +1,8 @@
+rijen = int(input("hoeveel rijen wil je  : "))
+kolommen = int(input("hoeveel kolommen wil je : "))
+symbool = input("welk symbool : ")
+
+for i in range(rijen):
+    for j in range(kolommen):
+        print(symbool ,end="")
+    print()
