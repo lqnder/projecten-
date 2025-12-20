@@ -1,0 +1,10 @@
+format specifiers
+werkt alleen maar bij f-strings
+.(numer)f = round to that many decimal spaces --> afronden tot het opgegeven cijfer
+:(number) = allocate that many spaces ---> hoeveel plaats er tussen de variabelen is en de rest van de string
+:0(number) = number padded ---> nu zij de spaties niet meer leeg maar vol met het getal 0
+:<(number) = links uitlijnen
+:>(number) = rechts uitlijnen
+:+ = alle nummers die positief zijn krijgen een + alleen bij int
+:(spatie) = alle nummers krijgen een spatie als ze geen teken ervoor hebben alleen bij int of float geen string
+:, ---> duizend apart houden met een komma
